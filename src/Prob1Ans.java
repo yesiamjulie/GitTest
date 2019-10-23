@@ -3,6 +3,13 @@ public class Prob1Ans {
 
         int i = 1;
 
+        /*
+            for의 경우
+            for(i=1 ; i < 101 ; i ++ )
+
+            i=1;이라는 초기화는 while에서 할 수 없다.
+            while(i++ < 101)
+         */
         while( i++ < 100) {
             if (i % 3 == 0) {
 
