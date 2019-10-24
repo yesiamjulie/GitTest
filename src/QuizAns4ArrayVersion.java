@@ -15,6 +15,8 @@ public class QuizAns4ArrayVersion {
 
      */
     public static void main(String[] args) {
+
+        //실제 [new]개수만큼 int형 배열을 할당( 메모리 할당 )
         int[] series;
 
         Scanner in = new Scanner(System.in);
@@ -26,7 +28,11 @@ public class QuizAns4ArrayVersion {
 
         int res= 0;
 
+        // 메모리가 할당되었으므로 실제 데이터를 배치
         series[0] = 1; series[1] = 1; series[2] = 3;
+
+        /* 배열의 인덱스는 0부터 시작한다는 것 !
+           그러므로 1번째는 [0] , 2번째는 [1], 3번째는 [2] .......임을 기억하자.*/
 
         for (int i = 3; i < num; i++) {
             series[i] = series[i-3] + series[i-1];
