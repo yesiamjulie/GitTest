@@ -4,6 +4,8 @@ public class Test {
         System.out.println("Hello Java with Git");
                 
         System.out.println("Additional Edit");
+        
+        System.out.println("Git pull test");
 
     }
 }
