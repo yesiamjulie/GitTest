@@ -57,11 +57,15 @@ public class ChallengeProb {
         j = 0 = 1231
 
         1231 23423 52352  2342332
+        [0]  [1]  [2]     [3]
 
-
+        정렬파트
          */
 
+        // 중복이 없는 숫자를 배치할 배열
         int[] number; // 숫자배열 ( 중복없는 숫자값들을 저장)
+
+        //각 숫자 값들이 얼마나 중복되었는지를 나타내는 배열
         int[] freqCheck; // 빈도수 배열
 
         /*
@@ -75,7 +79,7 @@ public class ChallengeProb {
             - 중복되는 숫자가 몇 개 있는지 모르기 때문에,
               정확한 원소의 개수를 산출 할 수 없다.
 
-              **그러므로 먼저 중복되지 않은 원소 개수를 판별 할 필요가 있다.
+              ** 6.그러므로 먼저 중복되지 않은 원소 개수를 판별 할 필요가 있다.
               앞 요소들과 비교해 같지 않으면 카운트 ++
 
 
@@ -132,6 +136,7 @@ public class ChallengeProb {
 
         int nonRecursElem = 0;
 
+        // 중복되지 않는 숫자값들을 실질적으로 할당하는 작업
         for (i = 0; i < len; i++) {
             for (j = 0; j < i; j++) {
                 if (wirelessFreq[i] == wirelessFreq[j]) {
@@ -145,6 +150,7 @@ public class ChallengeProb {
             }
 
         }
+        //중복되지 않은 값 할당 완료.
 
 
         for (i = 0; i < nonRecursElem; i++) {
@@ -168,6 +174,8 @@ public class ChallengeProb {
          *
          * */
 
+        //중복되지 않는 원소가 몇 개 있는지 계산함.
+        // 각 숫자들이 몇 번 반복되었는지 검사함.
         for (i = 0; i < len; i++) { // 40개
             for (j = 0; j < nonRecursElem; j++) {//21개
                 if (number[j] == wirelessFreq[i]) {
@@ -176,7 +184,7 @@ public class ChallengeProb {
                 }
             }
         }
-
+    // 각 숫자들이 몇 번 반복되었는지 검사 완료 !
 
         /*
         for (i = 0; i < len; i++) {
@@ -211,14 +219,23 @@ public class ChallengeProb {
 
         }
 */
+        //중복이 없으면
         for (i = 0; i < nonRecursElem; i++) {
             System.out.println("freqCheck[" + i + "]=" + freqCheck[i]);
 
         }
 
-        /*
-            - 내림차순 정렬 후 앞에 두개만 뽑기.
-              내림차순으로 freqCheck와 number를 정렬하면 끝 !*/
+        /* 7.
+            - 오름차순으로 freqCheck와  number를 정렬하면 끝 !
+
+              ( 버그 : 내림차순으로 freqCheck와 number를 정렬하면 끝 !)
+
+              오름차순으로 중복횟수와 숫자배열을 정렬한다.
+              이때 기준점이 되는 것은 중복 횟수가 된다.
+              그래야 큰 숫자 기준으로 나오는 것이 아니라
+              중복 횟수가 많은 녀석을 기준으로 나올 것이기 때문이다.
+         */
+
 
         int key2;
 
