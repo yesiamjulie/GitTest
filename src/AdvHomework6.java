@@ -58,7 +58,7 @@ public class AdvHomework6 {
 
             idx[i]  = (rand.nextInt(131072) + 1 &~ (4096));
             System.out.println("idx[" + i + "]=" + idx[i] +
-                                ",idx =" + idx[i]/ 4096);
+                                ",idx =" + idx[i]/ 4096);  // 낭비한 공간
 
         }
 
