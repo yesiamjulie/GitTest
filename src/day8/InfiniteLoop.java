@@ -1,3 +1,5 @@
+package day8;
+
 public class InfiniteLoop {
     public static void main(String[] args) {
         /* 조건이 없다 = 무조건 실행한다. = 무한루프 = for문으로

@@ -1,3 +1,5 @@
+package day10;
+
 import java.util.Random;
 
 public class RandomTest {

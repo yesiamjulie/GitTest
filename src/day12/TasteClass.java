@@ -1,4 +1,4 @@
-/*
+package day12;/*
     Good Abstraction 이란?
 
     1. 내가 표현하려는 class에 필요한 변수를 설정한다.
@@ -47,7 +47,7 @@ public class TasteClass {
     public static void main(String[] args) {
 
         //Scanner in = new Scanner(System.in);
-        Car myCar = new Car(); // Car라는 class를 myCar로 가져와서 new Car()로 메모리를 할당하겠다. ( 힙에 메모리 공간을 만든다.)
+        Car myCar = new Car(); // Car라는 class를 myCar로 가져와서 new day12.Car()로 메모리를 할당하겠다. ( 힙에 메모리 공간을 만든다.)
         myCar.speed = 70; //"."은 클래스안에 있는 것을 사용하겠다는 것을 의미한다. 따라서 클래스에 없는 것은 사용할 수 없다.
         myCar.color = "Blue";
 

@@ -14,8 +14,8 @@ public class ProbSol {
 
         int freeMem[] = new int[10];
         int freeArea[][] = new int[MAXIDX][MAXLEN];
-        int freeIdxCount[] = {0, 0, 0, 0, 0};
-        int remain ;
+        int freeIdxCount[] = {0, 0, 0, 0, 0, 0};
+        int remain;
 
         Random rand = new Random();
 
@@ -64,10 +64,7 @@ public class ProbSol {
                     System.out.printf("freeMem[%d] = %d\n\n", i, freeMem[i]);
 
                     idxCnt[j] ++ ;
-
-                    System.out.println();
-
-                            break;
+                    break;
 //                    for(i =0 ; i<MAXIDX ; i++ ) {
 //
 //                        if( freeMem[i] > 4096 && remain > 4096) {
@@ -86,17 +83,70 @@ public class ProbSol {
             }
             // buddy , slab 할당법
 
-            for (int j = 4; j >= 0; j++) {
+            for (int j = 4; j >= 0; j--) {
                 remain = freeMem[i];
+
                 if((remain &~ ((START << j) - 1)) >= 4096) {
-                    freeArea[j][freeIdxCount[j]] = START << j;
+                    freeArea[j][freeIdxCount[j]++] = START << j;
                     freeMem[i] -= START << j;
 
                 }
+/* 디버깅 용도이므로 주석처리
+                System.out.println("remain = " + remain);
                 System.out.printf("freeMem[%d] = %d\n", i, freeMem[i]);
                 System.out.printf("freeArea[%d][%d] = %d\n\n", j, freeIdxCount[j], freeArea[j][freeIdxCount[j]]);
 
-                freeIdxCount[j]++;
+//                freeIdxCount[j]++;
+  */
+            }
+        }
+
+        for (int i = 0; i < MAXLEN; i++) {
+            for (int j = 0; j < MAXIDX; j++) {
+                System.out.printf("freeArea[%d][%d] = %d\n\n", j, i , freeArea[j][i]);
+             }
+        }
+        /*
+            stor[][] 배열에 설정된 것은 실제 할당된 것들
+            freeArea[][]는 현재 빈 공간에 대한 정보
+
+            더이상 stor[][] 에 공간이 부족하여
+            할당할 수 있는 상태가 아니라 가정
+
+            그러므로 이제 다시 뭔가를 할당할 때
+            freeArea에서 적절한 녀석을 찾아서
+            배치하는 것을 확인하면 된다.
+
+
+         */
+        for (int i = 0; i < MAXIDX; i++) {
+
+         System.out.printf("freeIdxCnt[%d] = %d\n", i , freeIdxCount[i]);
+        }
+
+        /*
+        실제 랜덤값을 배치해보도록 한다. ( 남아있는 공간에 랜덤값 재배치 )
+         */
+        // freeIdxCount를 사용해서 Stack방식으로 활용해보자.
+
+        for (int i = 0; i < 3; i++) {
+
+            // 1 ~ 32768까지의 수 배치
+            int tmp = rand.nextInt(32768) + 1;
+            System.out.printf("rand tmp = %d\n" , tmp);
+
+            for (int j = 0; j < 4; j++) {
+
+                if (tmp >> (12 + j) <= 0) {
+                    freeArea[j][freeIdxCount[j]-1] = 0; // 배치가 되면 더이상 사용하지 않는다는 의미
+                    freeIdxCount[j]--;
+                    break;
+                }
+            }
+        }
+        for (int i = 0; i < MAXLEN; i++) {
+            for (int j = 0; j < MAXIDX; j++) {
+                System.out.printf("After freeArea[%d][%d] = %d\n\n", j, i , freeArea[j][i]);
             }
         }
     }

@@ -1,3 +1,5 @@
+package day8;
+
 public class Prob1Ans {
     public static void main(String[] args) {
 

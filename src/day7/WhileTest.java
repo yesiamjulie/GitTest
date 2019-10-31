@@ -1,3 +1,5 @@
+package day7;
+
 import java.util.Scanner;
 
 public class WhileTest {

@@ -1,3 +1,5 @@
+package day8;
+
 public class ArrayTest {
     // 데이터 처리를 잘 하기 위한 배열
 

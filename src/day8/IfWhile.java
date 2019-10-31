@@ -1,3 +1,5 @@
+package day8;
+
 public class IfWhile {
     /*
         1~5까지의 숫자 중 짝수만 찾아서

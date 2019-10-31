@@ -1,3 +1,5 @@
+package day10;
+
 import jdk.jfr.Frequency;
 
 public class ChallengeProb {

@@ -1,3 +1,5 @@
+package day13;
+
 import java.util.Random;
 
 public class NandTest {

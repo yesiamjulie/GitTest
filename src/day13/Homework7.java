@@ -1,3 +1,5 @@
+package day13;
+
 import org.w3c.dom.ranges.Range;
 
 import java.util.Random;
