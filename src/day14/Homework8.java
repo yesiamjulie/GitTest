@@ -54,9 +54,11 @@ public class Homework8 {
 
 
         }
+            long diff = odd_sum - even_sum;
         System.out.println("----------문제은행6번----------");
         System.out.println("홀수들의 합 :" + odd_sum );
         System.out.println("짝수들의 합 :" + even_sum);
+        System.out.println("홀수들의 합 - 짝수들의 합 :" + diff);
         System.out.println();
     }
 
