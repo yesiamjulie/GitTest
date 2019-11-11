@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox chk1, chk2, chk3;
     Button btn;
     ImageView imgView;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
