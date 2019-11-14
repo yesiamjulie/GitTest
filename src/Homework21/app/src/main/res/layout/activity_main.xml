@@ -6,25 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="10dp"
+    >
+
+
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chk1"
-        android:text="First"/>
+        android:text="Show Menu!"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chk2"
-        android:text="Second"/>
+        android:text="Random View!"/>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/chk3"
-        android:text="Third"/>
+        android:text="Sequential View"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -32,11 +36,18 @@
         android:id="@+id/imgView"
         android:visibility="invisible"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text"
+        android:visibility="invisible"
+        android:text="Default"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnChk"
-        android:text="Click"/>
+        android:text="Select Complete!"
+        android:visibility="invisible"/>
 
 
 </LinearLayout>

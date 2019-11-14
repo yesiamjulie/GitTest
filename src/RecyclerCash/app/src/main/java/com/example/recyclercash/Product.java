@@ -5,18 +5,14 @@ public class Product {
     String manufacturer;
     int countAgent;
     int price;
-    int imgRes;
+    int imageRes;
 
-
-    public Product(String name,
-                   String manufacturer,
-                   int countAgent,
-                   int price, int imgRes) {
+    public Product(String name, String manufacturer, int countAgent, int price, int imageRes) {
         this.name = name;
         this.manufacturer = manufacturer;
         this.countAgent = countAgent;
         this.price = price;
-        this.imgRes = imgRes;
+        this.imageRes = imageRes;
     }
 
     public String getName() {
@@ -51,11 +47,11 @@ public class Product {
         this.price = price;
     }
 
-    public int getImgRes() {
-        return imgRes;
+    public int getImageRes() {
+        return imageRes;
     }
 
-    public void setImgRes(int imgRes) {
-        this.imgRes = imgRes;
+    public void setImageRes(int imageRes) {
+        this.imageRes = imageRes;
     }
 }
