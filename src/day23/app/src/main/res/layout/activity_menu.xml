@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Press Button to add Scene"
+        android:textSize="20dp"
+        android:id="@+id/text"/>
+
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+    <!-- '동적'으로 추가되는 Layout인데
+         여기서 Context를 활용하기 위해
+         LayoutInflater라는 것을 사용하게 된다.
+         Java에서 유사한 녀석이라면 new에 해당하며
+         C, C++에서는 malloc, calloc등이 있다.
+         결국은 동적 작업을 지원하기 위함임.
+
+         (따라서 LinearLayout을 여러개 만들면 , 동적으로 계속해서 사용할 수 있는 레이아웃이 만들어진다.-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/container"
+        android:orientation="vertical"/>
+
+
+
+</LinearLayout>

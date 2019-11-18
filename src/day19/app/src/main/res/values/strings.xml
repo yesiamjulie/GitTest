@@ -1,0 +1,6 @@
+<resources>
+    <!-- string 값을 만들겠다! string값으로 쓰이는 것들을 여기에 모아두고 쓴다.
+    특히 반복적인 string값을 필요로 할때 편하게 사용할 수 있다.-->
+    <string name="app_name">ButtonTest</string>
+    <string name="StrBtn1" >Button String Test </string>
+</resources>
