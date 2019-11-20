@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 con.setConnectTimeout(10000);
 
                 /*
-                 Web에서 사용하는 방식이 두 가지가 있다.
+                 Web에서 사용하는 방식( 네트워크 전송 방식)이 두 가지가 있다.
                  1. GET
                  2. POST
                  */
@@ -127,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
 
                 /*
                     BufferedReader와 InputStreamReader가 보이는데
-                    Stream이란 것의 정체를 파악하는 것이 무엇보다 중요하다.
+                    'Stream'이란 것의 정체를 파악하는 것이 무엇보다 중요하다.
                     순서가 반드시 지켜져야 하는 것이 Stream이다.
 
                     그럼 여기서 왜 Stream을 사용했을까?
