@@ -2,15 +2,19 @@ package com.example.homework25;
 
         import androidx.appcompat.app.AppCompatActivity;
 
+        import android.content.Intent;
         import android.graphics.Color;
         import android.os.Bundle;
         import android.text.method.HideReturnsTransformationMethod;
         import android.text.method.PasswordTransformationMethod;
         import android.view.Gravity;
+        import android.view.View;
         import android.widget.Button;
         import android.widget.EditText;
         import android.widget.LinearLayout;
         import android.widget.TextView;
+
+        import com.example.homework25.ui.login.LoginActivity;
 
         import java.security.KeyStore;
 
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
         bt2.setTextColor(Color.WHITE);
         bt2.setText("Join Member");
         bt2.setBackgroundColor(Color.MAGENTA);
-        params.setMargins(0,0,0,20);
+        params.setMargins(10,0,0,20);
 
         manager.addView(tv1, params);
         manager.addView(et1, params);
@@ -74,6 +78,23 @@ public class MainActivity extends AppCompatActivity {
         manager.addView(bt1,params);
         manager.addView(bt2,params);
         setContentView(manager);
+
+
+        bt1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //로그인 성공시
+
+            }
+        });
+
+        bt2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }

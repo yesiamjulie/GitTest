@@ -5,22 +5,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginLeft="30dp"
-    android:layout_gravity="center_vertical"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:gravity="center"
+    >
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ID"
+        android:layout_marginLeft="30dp"
         android:id="@+id/tv_id"
         />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/et_id"/>
+        android:id="@+id/et_id">
+        <requestFocus></requestFocus>
+    </EditText>
 
 
     <TextView
@@ -28,26 +37,42 @@
         android:layout_height="wrap_content"
         android:text="Passoword"
         android:id="@+id/tv_pw"
+        android:layout_marginLeft="30dp"
         />
 
-    <EditText
+        <EditText
+            android:id="@+id/et_pw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword">
+
+            <requestFocus></requestFocus>
+        </EditText>
+
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/et_pw"/>
+        android:gravity="center">
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Login"
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimaryDark"
 
-        />
+            android:text="Login"
+            android:textColor="@android:color/background_light" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_join"
-        android:text="Join"/>
-
+        <Button
+            android:id="@+id/btn_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            android:text="Join"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
 
 </LinearLayout>
