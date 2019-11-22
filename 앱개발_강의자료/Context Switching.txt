@@ -1,0 +1,30 @@
+context -> activity 만들기 ( app - new - Activity - empty activity)
+
+
+
+constraintlayout일때는 별도의 설정이 필요하다
+참고로 아래 옵션들은 언제나 가운데로 (버튼이) 배치되게 된다.
+ app:layout_constraintBottom_toBottomOf="parent"
+ app:layout_constraintEnd_toEndOf="parent"
+ app:layout_constraintTop_toTopOf="parent"
+ app:layout_constraintStart_toStartOf="parent"
+
+
+새로운 창을 하나 만들자
+리소스-layout에서 만들자(new resource file)
+
+ LayoutInflater !!!!! - context를 저장할수 있다.
+
+
+AndroidManifest.xml
+여기서 처음 나올 화면과 그 후에 나올 화면을 배치하기 위한 작업을 해준다.
+<activity android:name=".MainActivity"></activity>
+<activity android:name=".MenuActivity">
+<intent-filter> ....가 걸려있는 Activity가 먼저 실행된다.
+즉 여기서는 MenuActivity가 실행되는 것이다.
+
+
+
+LinearLayout 의 LayoutInflater 
+동적으로 표시해줘야하는 레이아웃이 필요할 때 쓰인다.
+

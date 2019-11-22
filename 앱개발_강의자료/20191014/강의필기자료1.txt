@@ -1,0 +1,19 @@
+안드로이드 스튜디오 설치
+
+profile or debug : 성능 측정
+
+kotlin ( vs Java)
+
+res : resource / 이미지파일을 넣어야 할 때 : res/drawable
+
+textView 
+
+폰트사이즈  : Editor - settings - font 
+
+주석처리 <--!   -->
+
+빌드는 상단 우측 망치모양 --> no device --> 실제 안드로이드 기기 연결 혹은 amulator 설치
+amulator설치 : No devices 클릭 
+
+
+

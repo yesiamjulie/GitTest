@@ -1,0 +1,41 @@
+-java 설치
+zulu openjdk 설치
+LTS 버전 ( 안정적)
+ARM : 핸드폰
+.msi로 설치
+
+-intelij 설치
+community 버전설치
+
+Understanding Java Language 
+-1~8번 목차까지는 매우 중요
+-16.Swing은 안쓴지 10여년 됨
+-collection은 자료구조 개념을 다룰 수 있게됨.
+-JNI(java native interface)는 java가 c언어로 짜여져 있기 때문에......음?
+-java에서 c를 call할 수 있다. 
+-엔터프라이스에서는 자바가 우세
+-개발속도, 생산성 측면에서는 자바가 뛰어남.
+-가상 머신을 통해 진행되므로 속도가 떨어짐.
+-디버깅기준에서는 c가 메모리구조를 볼 수 있기에 더 유리
+
+-컴파일러 : javac
+-instrction : ISA ( in 컴퓨터구조)
+
+-제니퍼소프트 면접문제. 
+.java -> javac(complier) -> .class로 바꿈 -> jvm(java) 
+
+
+.xml
+id 속성을 주어 컨트롤 하기. id는 식별자에 해당한다.
+android:id="@+id/secondText"
+
+
+-intellij
+main 메소드에서 초록색 시작 버튼 ( 단축키 ctrl shift f10)
+
+
+
+
+
+
+
