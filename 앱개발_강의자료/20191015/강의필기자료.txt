@@ -1,0 +1,23 @@
+recyclerView : 결제부분에서 사용됨 / 스크롤할 수 있는 뷰
+seekbar : 밝기조절
+
+Q. LinearLayout, Orientation이란?
+
+Design에서 기본 레이아웃으로 추가시 다른 옵션(버튼, 바 등)들이 0,0에 위치하게 됨
+-> LinearLayout 으로 변경
+Like 
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+ ......
+</LinearLayout
+
+
+android:orientation="horizental"이어서 평행하게 모든 옵션들이 배치
+-> android:orientation="vertical"로 바꿔주면 세로로 "순차적"으로 배치됨.
+
+
+- 레이아웃안에 다른 레이아웃들이 동시에 배치가 가능하다.
+가령, 앱에서 하단에 고정되어있는 부분과 중간에 동영상이 재생되거나 액션이 진행되는 등의 경우는
+레이아웃이 각기 다른 형태로 배치되어 진행되고 있다고 볼 수 있다.

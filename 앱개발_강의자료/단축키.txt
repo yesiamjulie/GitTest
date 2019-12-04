@@ -1,0 +1,13 @@
+* 단축키
+ getter , setter 자동 생성 , toString:  Alt + Insert 
+실행(build & run) : Shift + Ctrl + F10
+psvm : public static void main(String[] args) 
+sout : Sysmtem.out.println
+Ctrl + Shift + Enter :   ";" 입력 한줄 코드s완성  
+Ctrl + / : 한줄 주석
+Ctrl + Y : 한 줄 삭제
+Alt + shift + ↑↓ 라인 아래위 이동
+Ctrl + d   :   한줄 복사
+Ctrl + Alt + L : 코드 자동정렬
+Home, End : 라인 첫/끝 이동
+Shift + F6 : 변수 이름 재정의
